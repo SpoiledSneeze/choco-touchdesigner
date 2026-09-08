@@ -30,4 +30,4 @@ function global:au_GetLatest {
 }
 
 # Let AU natively download and calculate the hash
-update
+update -ChecksumFor 64
