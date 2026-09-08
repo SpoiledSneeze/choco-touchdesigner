@@ -3,8 +3,8 @@
 $packageArgs = @{
   packageName            = 'touchdesigner'
   fileType               = 'exe'
-  url64bit               = 'https://download.derivative.ca/TouchDesignerWebInstaller.2025.33070.exe'
-  checksum64             = '42971F7BA7AE93A6E8220AFDAFB64492EDEC7E4C8366F6E6BFD0900E62D404AD'
+  url64bit               = 'https://download.derivative.ca/TouchDesignerWebInstaller.2025.33230.exe'
+  checksum64             = '2bf4fddcb8c08c25b6e043e08b11a36f65ec8bcbd647793341c29a1e1ab72c49'
   checksumType64         = 'sha256'
   silentArgs             = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes         = @(0)
