@@ -9,7 +9,7 @@ function global:au_SearchReplace {
       "(?i)^(\s*[$]?softwareName\s*=\s*)'.*'"     = "`$1'$($Latest.SoftwareName)'"
     }
     "touchdesigner.nuspec" = @{
-      "(?i)(<version>)(.*)(</version>)" = "`$1$($Latest.Version)`$3"
+      "(?i)(<version>)(.*?)(</version>)" = "`$1$($Latest.Version)`$3"
     }
   }
 }
