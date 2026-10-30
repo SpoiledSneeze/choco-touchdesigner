@@ -9,7 +9,9 @@ on:
 jobs:
   update-packages:
     runs-on: windows-latest
-    
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v5
@@ -26,7 +28,7 @@ jobs:
         shell: powershell
         env:
           au_Push: 'true'
-          chocolateyApiKey: ${{ secrets.CHOCOLATEY_API_KEY }}
+          nugetApiKey: ${{ secrets.CHOCOLATEY_API_KEY }}
         run: |
           Set-Location "automatic\touchdesigner"
           ./update.ps1
