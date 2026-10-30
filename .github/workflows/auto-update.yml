@@ -22,15 +22,20 @@ jobs:
         shell: powershell
         run: |
           Set-ExecutionPolicy Bypass -Scope Process -Force
-          Install-Module au -Force -Scope CurrentUser
+          Install-Module au -RequiredVersion 2022.10.24 -Force -Scope CurrentUser
 
       - name: Run AU Update Script
+        id: au
         shell: powershell
         run: |
           Set-Location "automatic\touchdesigner"
-          ./update.ps1
+          $result = ./update.ps1
+          $result
+          $updated = ($result | Where-Object { $_ -match 'Package updated' }) -ne $null
+          echo "updated=$($updated.ToString().ToLower())" >> $Env:GITHUB_OUTPUT
 
       - name: Push to Chocolatey
+        if: steps.au.outputs.updated == 'true'
         shell: powershell
         env:
           CHOCOLATEY_API_KEY: ${{ secrets.CHOCOLATEY_API_KEY }}
@@ -40,20 +45,21 @@ jobs:
             Write-Host "Pushing $($nupkg.Name) to Chocolatey..."
             choco push $nupkg.FullName --source https://push.chocolatey.org/ --api-key $Env:CHOCOLATEY_API_KEY
           } else {
-            Write-Host "No new package to push."
+            Write-Host "No .nupkg found to push."
+            exit 1
           }
 
       - name: Commit and Push Changes
+        if: steps.au.outputs.updated == 'true'
         shell: powershell
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
           git add -A
           $status = git status --porcelain
           if ($status) {
               git commit -m "(touchdesigner) Automatic update to latest version"
               git push
           } else {
-              Write-Host "No package updates found."
+              Write-Host "No file changes to commit."
           }

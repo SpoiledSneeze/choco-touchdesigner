@@ -9,6 +9,7 @@
     <tags>touchdesigner vj live video compositing projection mapping interactive show admin</tags>
     <projectUrl>https://derivative.ca/</projectUrl>
     <licenseUrl>https://derivative.ca/terms-use</licenseUrl>
+    <license type="expression">LicenseRef-proprietary</license>
     <iconUrl>https://raw.github.com/SpoiledSneeze/choco-touchdesigner/master/automatic/touchdesigner/icon/touchdesigner.png</iconUrl>
     <packageSourceUrl>https://github.com/SpoiledSneeze/choco-touchdesigner/tree/master/automatic/touchdesigner</packageSourceUrl>
     <docsUrl>https://derivative.ca/UserGuide</docsUrl>
