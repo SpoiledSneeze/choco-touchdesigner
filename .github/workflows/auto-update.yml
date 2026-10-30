@@ -28,7 +28,7 @@ jobs:
         shell: powershell
         env:
           au_Push: 'true'
-          nugetApiKey: ${{ secrets.CHOCOLATEY_API_KEY }}
+          au_NugetApiKey: ${{ secrets.CHOCOLATEY_API_KEY }}
         run: |
           Set-Location "automatic\touchdesigner"
           ./update.ps1
