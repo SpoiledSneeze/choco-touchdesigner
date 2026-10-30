@@ -26,12 +26,22 @@ jobs:
 
       - name: Run AU Update Script
         shell: powershell
-        env:
-          au_Push: 'true'
-          au_NugetApiKey: ${{ secrets.CHOCOLATEY_API_KEY }}
         run: |
           Set-Location "automatic\touchdesigner"
           ./update.ps1
+
+      - name: Push to Chocolatey
+        shell: powershell
+        env:
+          CHOCOLATEY_API_KEY: ${{ secrets.CHOCOLATEY_API_KEY }}
+        run: |
+          $nupkg = Get-ChildItem "automatic\touchdesigner\*.nupkg" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+          if ($nupkg) {
+            Write-Host "Pushing $($nupkg.Name) to Chocolatey..."
+            choco push $nupkg.FullName --source https://push.chocolatey.org/ --api-key $Env:CHOCOLATEY_API_KEY
+          } else {
+            Write-Host "No .nupkg found to push."
+          }
 
       - name: Commit and Push Changes
         shell: powershell
