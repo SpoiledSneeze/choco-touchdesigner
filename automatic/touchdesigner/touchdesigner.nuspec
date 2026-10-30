@@ -5,12 +5,12 @@
     <title>TouchDesigner</title>
     <version>2025.33230</version>
     <authors>Derivative</authors>
-    <owners>Redsandro,chocolatey</owners>
+    <owners>Redsandro,chocolatepiecornbread</owners>
     <tags>touchdesigner vj live video compositing projection mapping interactive show admin</tags>
     <projectUrl>https://derivative.ca/</projectUrl>
     <licenseUrl>https://derivative.ca/terms-use</licenseUrl>
-    <iconUrl>https://raw.github.com/Redsandro/choco-packages/master/automatic/touchdesigner/icon/touchdesigner.png</iconUrl>
-    <packageSourceUrl>https://github.com/Redsandro/choco-packages/tree/master/automatic/touchdesigner</packageSourceUrl>
+    <iconUrl>https://raw.github.com/SpoiledSneeze/choco-touchdesigner/master/automatic/touchdesigner/icon/touchdesigner.png</iconUrl>
+    <packageSourceUrl>https://github.com/SpoiledSneeze/choco-touchdesigner/tree/master/automatic/touchdesigner</packageSourceUrl>
     <docsUrl>https://derivative.ca/UserGuide</docsUrl>
     <summary>Node based visual programming language for real time interactive multimedia content</summary>
     <description>
