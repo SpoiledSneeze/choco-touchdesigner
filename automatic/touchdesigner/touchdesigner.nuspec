@@ -9,13 +9,13 @@
     <tags>touchdesigner vj live video compositing projection mapping interactive show admin</tags>
     <projectUrl>https://derivative.ca/</projectUrl>
     <licenseUrl>https://derivative.ca/terms-use</licenseUrl>
-    <iconUrl>https://raw.github.com/SpoiledSneeze/choco-touchdesigner/master/automatic/touchdesigner/icon/touchdesigner.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/SpoiledSneeze/choco-touchdesigner@838123663dce0ef12e294f217ed399b14c09402e/automatic/touchdesigner/icon/touchdesigner.png</iconUrl>
     <packageSourceUrl>https://github.com/SpoiledSneeze/choco-touchdesigner/tree/master/automatic/touchdesigner</packageSourceUrl>
     <docsUrl>https://derivative.ca/UserGuide</docsUrl>
     <releaseNotes>https://docs.derivative.ca/Release_Notes</releaseNotes>
     <summary>Node based visual programming language for real time interactive multimedia content</summary>
     <description>
-__TouchDesigner__ is a visual development platform that equips you with the tools you need to create stunning realtime projects and rich user experiences. Whether you're creating interactive media systems, architectural projections, live music visuals, or simply rapid-prototyping your latest creative impulse, TouchDesigner is the platform that can do it all.
+__TouchDesigner__ is a visual development platform that equips you with the tools you need to create stunning realtime projects and rich user experiences. Whether you're creating interactive media systems, architectural projections, live music visuals, or simply rapid-prototyping your latest creative impulse, TouchDesigner is the platform that can do it all. Please note, for commercial use of TouchDesigner, a paid license is required.
 
 ### Advanced node-based editor
 
